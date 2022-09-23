@@ -17,3 +17,6 @@ html code
 
 ## 해야할 일
 interceptor , error 처리 , exception 로그 , datasource(jpa) , swagger(?) , security , httpFilter(공격방어)
+
+## H2 Database
+You can check the front view of the h2 at `localhost:8080/h2-console`

@@ -8,13 +8,14 @@ spring:
   # spring - h2 연결
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:~/spring-qna-db # embedded Mode : db 데이터 저장 위치 :  ~/spring-qna-db
-  #spring.datasource.url=jdbc:h2:mem:test # In-Memory mode
+    url: jdbc:h2:~/spring-h2-db # embedded Mode : db 데이터 저장 위치 :  ~/spring-h2-db , # in memory mode -> jdbc:h2:mem:test
     username: sa
     password:
 
   sql:
     init:
       mode: always
-#spring.sql.init.schema-locations=classpath:schema.sql
-#spring.sql.init.data-locations=classpath:data.sql
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql  # resources/data.sqltsq
+
+

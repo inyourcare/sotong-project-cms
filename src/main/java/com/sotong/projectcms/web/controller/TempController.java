@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class TempController {
     @RequestMapping(path = "/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity signUp() throws Exception {
+    public ResponseEntity test() throws Exception {
         return ResponseEntity.ok().body(ApiResponse.builder().success(true).build());
     }
 }
