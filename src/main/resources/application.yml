@@ -18,4 +18,4 @@ spring:
 #      schema-locations: classpath:schema.sql
 #      data-locations: classpath:data.sql  # resources/data.sqltsq
 
-
+test: test
