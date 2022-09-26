@@ -1,6 +1,7 @@
 package com.sotong.projectcms.web.controller;
 
 import com.sotong.projectcms.service.DbMngService;
+import com.sotong.projectcms.web.request.CmmnRequest;
 import com.sotong.projectcms.web.request.CreateTableRequest;
 import com.sotong.projectcms.web.response.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ import javax.validation.Valid;
 public class DbMngController {
     @Autowired
     DbMngService dbMngService;
-    @RequestMapping(path = "/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity test() throws Exception {
+    @RequestMapping(path = "/test", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity test(@Valid @RequestBody CmmnRequest req) throws Exception {
 //        if (member.isPresent()) {
 //            basicResponse = BasicResponse.builder()
 //                    .code(HttpStatus.OK.value())
@@ -49,7 +50,7 @@ public class DbMngController {
 //                .count(memberList.size()).build();
 //
 //        return new ResponseEntity<>(basicResponse, HttpStatus.OK);
-        dbMngService.testQuery();
+        dbMngService.testQuery(req);
 
 //        ApiResponse basicResponse = ApiResponse.builder()
 //                .code(HttpStatus.OK.value())
