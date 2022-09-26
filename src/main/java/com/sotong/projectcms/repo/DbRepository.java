@@ -34,12 +34,14 @@ public class DbRepository {
         Connection conn = datasourceProvider.provideDatasource(datasourceType).getConnection();
 //        Connection conn = DriverManager.getConnection(url + "/" + databaseName, username, password);
         Statement stmt = conn.createStatement();
-        String sql = """
-                    CREATE 
-                    """ + databaseName +
-                    """
-                    .TABLE\040
-                    """
+        String sql =
+                """
+                CREATE TABLE\040
+                """
+                + databaseName +
+                """
+                .
+                """
                 + tableName +
                 """
                 (

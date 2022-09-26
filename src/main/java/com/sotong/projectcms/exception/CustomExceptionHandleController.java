@@ -1,4 +1,4 @@
-package com.sotong.projectcms.web.exception;
+package com.sotong.projectcms.exception;
 
 import com.sotong.projectcms.exception.InvalidParamException;
 import com.sotong.projectcms.web.response.ApiResponse;
@@ -18,27 +18,18 @@ public class CustomExceptionHandleController {
     public ResponseEntity<Object> invalidParamHandle(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         ex.printStackTrace();
         ApiResponse basicResponse = new ApiResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
-        if (ex instanceof NullPointerException) {
-            return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
-        }
         return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
     }
     @ExceptionHandler(BindException.class)
     public ResponseEntity<Object> bindingHandle(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         ex.printStackTrace();
         ApiResponse basicResponse = new ApiResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
-        if (ex instanceof NullPointerException) {
-            return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
-        }
         return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
     }
     @ExceptionHandler(ServletException.class)
     public ResponseEntity<Object> servletHandle(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         ex.printStackTrace();
         ApiResponse basicResponse = new ApiResponse(ex.getMessage(), HttpStatus.BAD_REQUEST);
-        if (ex instanceof NullPointerException) {
-            return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
-        }
         return new ResponseEntity<>(basicResponse, HttpStatus.BAD_REQUEST);
     }
 

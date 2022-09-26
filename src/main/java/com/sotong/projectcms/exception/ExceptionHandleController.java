@@ -1,4 +1,4 @@
-package com.sotong.projectcms.web.exception;
+package com.sotong.projectcms.exception;
 
 import com.sotong.projectcms.web.response.ApiResponse;
 import org.springframework.http.HttpStatus;
