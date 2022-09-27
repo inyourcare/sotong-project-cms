@@ -32,3 +32,7 @@ config.anotation 아래 AdminController 와 FrontController 어노테이션 묶�
 
 ## BeanConfiguration
 BeanConfig 에서 처리하자
+
+## to do
+- Admin / Front 어노테이션 컨트롤러에 CrossOrigin 설정
+- admin.controller.DashboardController createTable 에 적용된 response 적용

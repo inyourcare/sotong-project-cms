@@ -1,14 +1,11 @@
-package com.sotong.projectcms.web.admin.controller.common;
+package com.sotong.projectcms.web.admin.controller.cmmn;
 
 import com.sotong.projectcms.config.anotation.AdminController;
 import com.sotong.projectcms.persistence.repository.cms.PageRepository;
 import com.sotong.projectcms.web.admin.controller.parent.AdminAbstractController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
  * Advice controller provides shared data (variables, exception ...) to AdminController components.
