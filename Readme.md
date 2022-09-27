@@ -21,8 +21,14 @@ interceptor , error 처리 , exception 로그 , datasource(jpa) , swagger(?) , s
 ## H2 Database
 You can check the front view of the h2 at `localhost:8080/h2-console`
 
-## Datasource 편집
-기본적으로 application.yml 파일을 기초한다. 다중 데이터소스에 관한 내용은 DatasourceProvider 클래스를 참고
-
 ## Exception 설정
 @ControllerAdvice 어노테이션을 기반으로 설정한다. exception 패키지 아래 객체 참조
+
+## WebSecurityConfig
+/admin 아래 모든 요청은 권한이 있어야 가능하다. application.yml 아래 security 쿼리가 저장되어있다.
+
+## Controller 
+config.anotation 아래 AdminController 와 FrontController 어노테이션 묶음을 설정 해 놓았다.
+
+## BeanConfiguration
+BeanConfig 에서 처리하자
