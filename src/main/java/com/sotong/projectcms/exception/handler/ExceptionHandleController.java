@@ -1,6 +1,6 @@
-package com.sotong.projectcms.exception;
+package com.sotong.projectcms.exception.handler;
 
-import com.sotong.projectcms.web.response.ApiResponse;
+import com.sotong.projectcms.web.cmmn.response.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

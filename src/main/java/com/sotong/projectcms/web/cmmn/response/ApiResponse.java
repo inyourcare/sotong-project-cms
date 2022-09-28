@@ -1,4 +1,4 @@
-package com.sotong.projectcms.web.response;
+package com.sotong.projectcms.web.cmmn.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
