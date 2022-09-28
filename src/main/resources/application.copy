@@ -1,13 +1,14 @@
 spring:
-
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://s5db.synology.me:3307/cms_test
+    username:
+    password:
     initialization-mode: never
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.MariaDB10Dialect
   http:
     encoding:
       charset: UTF-8
@@ -19,6 +20,6 @@ spring:
     resources:
       cache:
         period: 0s
-#
-#  upload:
-#    work-dir: work #path to workdir
+
+upload:
+  work-dir: work #path to workdir

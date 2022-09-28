@@ -37,17 +37,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
+                .anonymous()
+                .and()
                 .authorizeRequests()
-                .mvcMatchers("/admin/css/**").permitAll()
-                .mvcMatchers("/admin/js/**").permitAll()
-                .mvcMatchers("/admin/**").authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll();
+//                .antMatchers(HttpMethod.POST,"/api/**").authenticated() // /api 하위 모든 POST요청
+//                .antMatchers(HttpMethod.PUT,"/api/**").authenticated() // /api 하위 모든 PUT요청
+//                .antMatchers(HttpMethod.DELETE,"/api/**").authenticated() // /api 하위 모든 DELETE요청
+//                .antMatchers("/manage/**").hasAuthority("ROLE_ADMIN") // /manage 하위 모든 요청은 관리자만
+//                .antMatchers("/","/login","/profile","/api/**").permitAll()
+//                .mvcMatchers("/admin/css/**").permitAll()
+//                .mvcMatchers("/admin/js/**").permitAll()
+                .mvcMatchers("/admin/**").authenticated();
+//                .and()
+//                .formLogin()
+//                .loginPage("/login")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .permitAll();
     }
 
     @Autowired

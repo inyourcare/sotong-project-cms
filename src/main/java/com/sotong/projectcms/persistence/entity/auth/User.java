@@ -1,6 +1,7 @@
 package com.sotong.projectcms.persistence.entity.auth;
 
 import lombok.Data;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -17,7 +18,7 @@ public class User {
     @Column
     private Long id;
 
-    @Column
+    @Column(unique = true)
     private String email;
 
     @Column
@@ -32,7 +33,10 @@ public class User {
     @Column
     private boolean active;
 
-
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Role> roles;
+
+    public void encodePassword(PasswordEncoder passwordEncoder) {
+        this.password = passwordEncoder.encode(this.password);
+    }
 }

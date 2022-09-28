@@ -18,6 +18,7 @@ html code
 ## 프로젝트 구조
 ### config
 - Admin / Front 어노테이션, Bean 설정 , 시큐리티설정
+- security 패키지 에 CurrentUser 추가
 ### exception
 - Exception 정의들과, handling  
 ### persistence
@@ -38,6 +39,10 @@ html code
 interceptor , error 처리 , exception 로그 , datasource(jpa) , swagger(?) , security , httpFilter(공격방어)
 
 
+## JPA Auditing
+config.JpaAuditingConfig 로 설정합니다.
+ANONYMOUS_USER 를 final 로 설정했습니다.
+persistence.entity.cmmn 아래에 Auditing 을 사용할 생각입니다.
 
 ## H2 Database
 You can check the front view of the h2 at `localhost:8080/h2-console`
