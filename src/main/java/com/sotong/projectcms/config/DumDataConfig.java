@@ -26,10 +26,11 @@ public class DumDataConfig implements CommandLineRunner {
         HashSet<Role> adminRoles = new HashSet<Role>();
         adminRoles.add(Role.builder().role(RoleType.ROLE_ADMIN).build());
 
-        if (userRepository.findByEmail("admin@sotong.co.kr").isEmpty()) {
+        if (userRepository.findBySignInId("admin").isEmpty()) {
             User user = userRepository.save(User.builder()
                     .signInId("admin")
-                    .email("admin@sotong.co.kr")
+//                    .email("admin@sotong.co.kr")
+                    .email(null)
                     .password(passwordEncoder.encode("pass12#$"))
                     .name("김소통")
                     .nickName("adminNick").roles(adminRoles).state(UserState.STATE_NORMAL).build());
