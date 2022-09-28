@@ -1,12 +1,12 @@
 package com.sotong.projectcms.business.service.cms;
 
 import com.sotong.projectcms.business.service.cms.api.PageService;
-import com.sotong.projectcms.persistence.entity.cms.Page;
-import com.sotong.projectcms.persistence.entity.cms.PageImage;
-import com.sotong.projectcms.persistence.entity.cms.PageText;
-import com.sotong.projectcms.persistence.repository.cms.PageImageRepository;
-import com.sotong.projectcms.persistence.repository.cms.PageRepository;
-import com.sotong.projectcms.persistence.repository.cms.PageTextRepository;
+import com.sotong.projectcms.persistence.entity.examples.cms.Page;
+import com.sotong.projectcms.persistence.entity.examples.cms.PageImage;
+import com.sotong.projectcms.persistence.entity.examples.cms.PageText;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageImageRepository;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageRepository;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageTextRepository;
 import com.sotong.projectcms.web.admin.form.PageForm;
 import com.sotong.projectcms.web.admin.form.PageTextForm;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
 package com.sotong.projectcms.business.service.cms;
 
 import com.sotong.projectcms.business.service.cms.api.StorageService;
-import com.sotong.projectcms.persistence.entity.cms.Page;
-import com.sotong.projectcms.persistence.entity.cms.PageImage;
-import com.sotong.projectcms.persistence.repository.cms.PageImageRepository;
+import com.sotong.projectcms.persistence.entity.examples.cms.Page;
+import com.sotong.projectcms.persistence.entity.examples.cms.PageImage;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageImageRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

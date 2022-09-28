@@ -1,6 +1,6 @@
 package com.sotong.projectcms.business.service.notification.api;
 
-import com.sotong.projectcms.persistence.entity.message.Notification;
+import com.sotong.projectcms.persistence.entity.examples.message.Notification;
 
 import java.util.List;
 

@@ -2,6 +2,7 @@ package com.sotong.projectcms.web.admin.controller;
 
 import com.sotong.projectcms.config.anotation.AdminController;
 import com.sotong.projectcms.persistence.entity.auth.User;
+import com.sotong.projectcms.persistence.entity.auth.type.UserState;
 import com.sotong.projectcms.persistence.repository.auth.UserRepository;
 import com.sotong.projectcms.web.admin.controller.parent.AdminAbstractController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,12 +35,10 @@ public class UserController extends AdminAbstractController {
         System.out.println(userId);
 
         // delete user
-        User user = userRepository.getOne(userId);
+        User user = userRepository.getReferenceById(userId);
 
-        if (user != null) {
-            user.setActive(false);
-            userRepository.save(user);
-        }
+        user.setState(UserState.STATE_LEAVED);
+        userRepository.save(user);
 
         return redirect("/admin/users/all");
     }

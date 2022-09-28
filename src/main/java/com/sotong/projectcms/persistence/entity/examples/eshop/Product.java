@@ -1,4 +1,4 @@
-package com.sotong.projectcms.persistence.entity.eshop;
+package com.sotong.projectcms.persistence.entity.examples.eshop;
 
 import lombok.Data;
 

@@ -2,17 +2,10 @@ package com.sotong.projectcms.web.admin.controller;
 
 
 import com.sotong.projectcms.config.anotation.AdminController;
-import com.sotong.projectcms.persistence.repository.eshop.ProductRepository;
+import com.sotong.projectcms.persistence.repository.examples.eshop.ProductRepository;
 import com.sotong.projectcms.web.admin.controller.parent.AdminAbstractController;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.validation.Valid;
-import java.util.Optional;
 
 /**
  * @author Samuel Butta

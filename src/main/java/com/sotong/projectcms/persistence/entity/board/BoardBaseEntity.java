@@ -17,10 +17,10 @@ public abstract class BoardBaseEntity extends BaseEntity {
 
     @Column(name = "created_by",updatable = false)
     @CreatedBy
-    protected String createdBy;
+    protected Long createdBy;
 
     @Column(name = "modified_by")
     @LastModifiedBy
-    protected String modifiedBy;
+    protected Long modifiedBy;
 
 }

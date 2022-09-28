@@ -15,14 +15,14 @@ import java.util.Optional;
 public class JpaAuditingConfig {
     private final String ANONYMOUS_USER = "anonymousUser";
     @Bean
-    public AuditorAware<String> auditorAware(){
+    public AuditorAware<Long> auditorAware(){
         return () -> {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             if(authentication == null || authentication.getPrincipal().equals(ANONYMOUS_USER)){
                 return Optional.empty();
             }
             User user = (User) authentication.getPrincipal();
-            return Optional.of(user.getEmail());
+            return Optional.of(user.getId());
         };
     }
 }

@@ -1,8 +1,8 @@
 package com.sotong.projectcms.business.service.eshop;
 
 import com.sotong.projectcms.business.service.eshop.api.ProductService;
-import com.sotong.projectcms.persistence.entity.eshop.Product;
-import com.sotong.projectcms.persistence.repository.eshop.ProductRepository;
+import com.sotong.projectcms.persistence.entity.examples.eshop.Product;
+import com.sotong.projectcms.persistence.repository.examples.eshop.ProductRepository;
 import com.sotong.projectcms.web.admin.form.ProductForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.sotong.projectcms.persistence.entity.cms;
+package com.sotong.projectcms.persistence.entity.examples.cms;
 
 import lombok.Data;
 

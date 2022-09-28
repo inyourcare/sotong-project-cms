@@ -1,9 +1,9 @@
 package com.sotong.projectcms.business.service.notification;
 
 import com.sotong.projectcms.business.service.notification.api.NotificationService;
-import com.sotong.projectcms.persistence.entity.message.Notification;
-import com.sotong.projectcms.persistence.entity.message.NotificationStatus;
-import com.sotong.projectcms.persistence.repository.message.NotificationRepository;
+import com.sotong.projectcms.persistence.entity.examples.message.Notification;
+import com.sotong.projectcms.persistence.entity.examples.message.NotificationStatus;
+import com.sotong.projectcms.persistence.repository.examples.message.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package com.sotong.projectcms.persistence.repository.message;
+package com.sotong.projectcms.persistence.repository.examples.message;
 
-import com.sotong.projectcms.persistence.entity.message.Notification;
-import com.sotong.projectcms.persistence.entity.message.NotificationStatus;
+import com.sotong.projectcms.persistence.entity.examples.message.Notification;
+import com.sotong.projectcms.persistence.entity.examples.message.NotificationStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

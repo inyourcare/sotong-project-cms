@@ -1,4 +1,4 @@
-package com.sotong.projectcms.persistence.entity.auth;
+package com.sotong.projectcms.persistence.entity.auth.type;
 
 /**
  * Prehled uzivatelskych roli v cele aplikaci.

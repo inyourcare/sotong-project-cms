@@ -1,6 +1,6 @@
 package com.sotong.projectcms.business.service.eshop.api;
 
-import com.sotong.projectcms.persistence.entity.eshop.Product;
+import com.sotong.projectcms.persistence.entity.examples.eshop.Product;
 import com.sotong.projectcms.web.admin.form.ProductForm;
 
 import java.util.List;

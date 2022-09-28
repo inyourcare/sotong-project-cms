@@ -1,6 +1,6 @@
 package com.sotong.projectcms.business.service.cms.api;
 
-import com.sotong.projectcms.persistence.entity.cms.Page;
+import com.sotong.projectcms.persistence.entity.examples.cms.Page;
 import com.sotong.projectcms.web.admin.form.PageForm;
 import com.sotong.projectcms.web.admin.form.PageTextForm;
 

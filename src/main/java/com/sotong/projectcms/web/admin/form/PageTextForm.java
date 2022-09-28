@@ -1,6 +1,6 @@
 package com.sotong.projectcms.web.admin.form;
 
-import com.sotong.projectcms.persistence.entity.cms.PageTextType;
+import com.sotong.projectcms.persistence.entity.examples.cms.PageTextType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

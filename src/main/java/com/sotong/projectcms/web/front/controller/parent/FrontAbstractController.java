@@ -1,12 +1,11 @@
 package com.sotong.projectcms.web.front.controller.parent;
 
-import com.sotong.projectcms.persistence.entity.cms.Page;
-import com.sotong.projectcms.persistence.repository.cms.PageRepository;
+import com.sotong.projectcms.persistence.entity.examples.cms.Page;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageRepository;
 import com.sotong.projectcms.web.cmmn.controller.AbstractController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
-import java.util.Map;
 import java.util.Optional;
 
 /**

@@ -1,6 +1,8 @@
 package com.sotong.projectcms.persistence.entity.auth;
 
+import com.sotong.projectcms.persistence.entity.auth.type.UserState;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
@@ -11,27 +13,21 @@ import java.util.Set;
  */
 @Entity
 @Data
-public class User {
+@EqualsAndHashCode(callSuper=true)
+public class User extends UserBaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
-    private Long id;
-
-    @Column(unique = true)
+    @Column(columnDefinition = "TINYTEXT default ''", unique = true)
     private String email;
 
-    @Column
+    @Column(columnDefinition = "TINYTEXT default ''")
     private String password;
 
-    @Column
-    private String firstName;
+    @Column(columnDefinition = "TINYTEXT default ''")
+    private String name;
 
     @Column
-    private String lastName;
-
-    @Column
-    private boolean active;
+    @Enumerated(EnumType.STRING)
+    private UserState state;
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Role> roles;

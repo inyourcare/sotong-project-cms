@@ -1,6 +1,6 @@
-package com.sotong.projectcms.persistence.repository.cms;
+package com.sotong.projectcms.persistence.repository.examples.cms;
 
-import com.sotong.projectcms.persistence.entity.cms.PageImage;
+import com.sotong.projectcms.persistence.entity.examples.cms.PageImage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -62,3 +62,4 @@ BeanConfig 에서 처리하자
 ## to do
 - Admin / Front 어노테이션 컨트롤러에 CrossOrigin 설정
 - admin.controller.DashboardController createTable 에 적용된 response 적용
+- persistence.entity/repository 아래 examples 삭제할 것

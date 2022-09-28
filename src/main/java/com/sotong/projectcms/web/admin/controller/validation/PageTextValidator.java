@@ -1,6 +1,6 @@
 package com.sotong.projectcms.web.admin.controller.validation;
 
-import com.sotong.projectcms.persistence.repository.cms.PageTextRepository;
+import com.sotong.projectcms.persistence.repository.examples.cms.PageTextRepository;
 import com.sotong.projectcms.web.admin.form.PageTextForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

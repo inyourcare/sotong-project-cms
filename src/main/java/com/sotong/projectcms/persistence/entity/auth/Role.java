@@ -1,6 +1,9 @@
 package com.sotong.projectcms.persistence.entity.auth;
 
+import com.sotong.projectcms.persistence.entity.auth.type.RoleType;
+import com.sotong.projectcms.persistence.entity.cmmn.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
@@ -9,13 +12,10 @@ import javax.persistence.*;
  */
 @Entity
 @Data
-public class Role {
+@EqualsAndHashCode(callSuper=true)
+public class Role extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
-    @Column(unique = true)
+    @Column
     @Enumerated(EnumType.STRING)
     private RoleType role;
 }

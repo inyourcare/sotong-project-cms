@@ -1,6 +1,6 @@
-package com.sotong.projectcms.persistence.repository.eshop;
+package com.sotong.projectcms.persistence.repository.examples.eshop;
 
-import com.sotong.projectcms.persistence.entity.eshop.Product;
+import com.sotong.projectcms.persistence.entity.examples.eshop.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
