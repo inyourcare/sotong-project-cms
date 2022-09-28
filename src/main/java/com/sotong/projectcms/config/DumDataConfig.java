@@ -20,14 +20,17 @@ public class DumDataConfig implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
         HashSet<Role> adminRoles = new HashSet<Role>();
         adminRoles.add(Role.builder().role(RoleType.ROLE_ADMIN).build());
-        if (!userRepository.findById(1L).isPresent()) {
+
+        if (userRepository.findByEmail("admin@sotong.co.kr").isEmpty()) {
             User user = userRepository.save(User.builder()
-                    .email("admin")
+                    .email("admin@sotong.co.kr")
                     .password(passwordEncoder.encode("pass12#$"))
-                    .name("Kim")
+                    .name("김소통")
                     .nickName("adminNick").roles(adminRoles).state(UserState.STATE_NORMAL).build());
         }
     }
