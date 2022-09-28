@@ -1,12 +1,28 @@
 package com.sotong.projectcms.business.service.board;
 
+import com.sotong.projectcms.persistence.entity.board.Board;
+import com.sotong.projectcms.persistence.repository.board.BoardRepositoy;
+import com.sotong.projectcms.utills.IAuthenticationFacade;
+import com.sotong.projectcms.web.admin.form.BoardForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BoardService {
     private static final Logger LOG = LoggerFactory.getLogger(BoardService.class);
+    @Autowired
+    private IAuthenticationFacade authenticationFacade;
+
+    @Autowired
+    private BoardRepositoy boardRepositoy;
+
+    public void createNewBoard(BoardForm form){
+        LOG.info("createNewBoard called, " + authenticationFacade.getAuthentication().getName());
+        Board newBoard = new Board(form);
+        boardRepositoy.save(newBoard);
+    }
 
 //    @Value("${upload.work-dir}")
 //    private String uploadWorkdir;

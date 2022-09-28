@@ -16,13 +16,13 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper=true)
 public class User extends UserBaseEntity{
 
-    @Column(columnDefinition = "TINYTEXT default ''", unique = true)
+    @Column(columnDefinition = "VARCHAR(255) default ''", unique = true)
     private String email;
 
-    @Column(columnDefinition = "TINYTEXT default ''")
+    @Column(columnDefinition = "VARCHAR(255) default ''")
     private String password;
 
-    @Column(columnDefinition = "TINYTEXT default ''")
+    @Column(columnDefinition = "VARCHAR(255) default ''")
     private String name;
 
     @Column

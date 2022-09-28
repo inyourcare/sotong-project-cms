@@ -19,6 +19,7 @@ html code
 ### config
 - Admin / Front 어노테이션, Bean 설정 , 시큐리티설정
 - security 패키지 에 CurrentUser 추가
+- validEnum 어노테이션을 통해 DTO(Form) 의 enum validation 을 구현하였다.
 ### exception
 - Exception 정의들과, handling  
 ### persistence
@@ -64,3 +65,5 @@ BeanConfig 에서 처리하자
 - admin.controller.DashboardController createTable 에 적용된 response 적용
 - persistence.entity/repository 아래 examples 삭제할 것
 - testcase 코드 작성해보자
+- requestForm 에 validation 이 약하다. Front 에 자유도가 너무 높다. enable => Y/N 만 넣으시오 있어야함
+- From validation 하드코딩 메시지 코드화

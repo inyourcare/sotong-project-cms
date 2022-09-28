@@ -20,6 +20,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+// HttpSecurity or a WebSecurityCustomizer
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -48,7 +49,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/","/login","/profile","/api/**").permitAll()
 //                .mvcMatchers("/admin/css/**").permitAll()
 //                .mvcMatchers("/admin/js/**").permitAll()
-                .mvcMatchers("/admin/**").authenticated();
+//                .mvcMatchers("/admind/**").authenticated();
+                .mvcMatchers("/onlyForTest/**").authenticated();
 //                .and()
 //                .formLogin()
 //                .loginPage("/login")
