@@ -13,27 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
-/**
- * @author Samuel Butta
- */
 @AdminController
 @RequestMapping("/admin")
-public class DashboardController extends AdminAbstractController {
-
-    @RequestMapping
-    public String renderIndex() {
-        return redirect("/admin/dashboard");
-    }
-
-    @RequestMapping("/dashboard")
-    public String renderDashboard() {
-        return "admin/dashboard";
-    }
-
-    @RequestMapping(path = "/createTable", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity createTable(@Valid @RequestBody TableForm req) throws Exception {
+public class BoardController extends AdminAbstractController {
+    @RequestMapping(path = "/addNewBoard", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Object> createTable(@Valid @RequestBody TableForm req) throws Exception {
 //        dbMngService.createTable(req);
         return new ResponseEntity<>(new ApiResponse("createTable successfully done", HttpStatus.OK), HttpStatus.OK);
     }
-
 }
