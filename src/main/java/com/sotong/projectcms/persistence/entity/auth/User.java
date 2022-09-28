@@ -1,8 +1,7 @@
 package com.sotong.projectcms.persistence.entity.auth;
 
 import com.sotong.projectcms.persistence.entity.auth.type.UserState;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
@@ -14,6 +13,9 @@ import java.util.Set;
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=true)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User extends UserBaseEntity{
 
     @Column(columnDefinition = "VARCHAR(255) default ''", unique = true)
@@ -24,6 +26,9 @@ public class User extends UserBaseEntity{
 
     @Column(columnDefinition = "VARCHAR(255) default ''")
     private String name;
+
+    @Column(columnDefinition = "VARCHAR(255) default ''")
+    private String nickName;
 
     @Column
     @Enumerated(EnumType.STRING)
