@@ -1,4 +1,38 @@
 spring:
+################## h2 database web으로 확인
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+
+  # spring - h2 연결
+#  datasource:
+#    driverClassName: org.h2.Driver
+##    url: jdbc:h2:~/spring-h2-db # embedded Mode : db 데이터 저장 위치 :  ~/spring-h2-db , # in memory mode -> jdbc:h2:mem:test
+#    url: jdbc:h2:~ # embedded Mode : db 데이터 저장 위치 :  ~/spring-h2-db , # in memory mode -> jdbc:h2:mem:test
+#    username: sa
+#    password:
+#####################
+
+######################
+#  datasource-sotong-maria:
+#    driverClassName: org.mariadb.jdbc.Driver
+#    jdbc-url: jdbc:mariadb://s5db.synology.me:3307
+#    username: 
+#    password:
+#  datasource-amazon-maria:
+#    driverClassName: org.mariadb.jdbc.Driver
+##    driverClassName: com.simba.athena.jdbc.DataSource
+#    jdbc-url: jdbc:mariadb://maria-db-cmn.czxzzpjg9fmu.ap-northeast-2.rds.amazonaws.com:3306
+#    username:
+#    password:
+
+# 다음 sql ~ 아래 설정은 resources 아래 .sql 파일로 initiating 이 필요한 경우 사용
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: classpath:schema.sql
+#      data-locations: classpath:data.sql  # resources/data.sqltsq
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://s5db.synology.me:3307/cms_test
@@ -7,7 +41,14 @@ spring:
     initialization-mode: never
   jpa:
     hibernate:
-      ddl-auto: update
+#      ddl-auto: update
+      ddl-auto: create
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#      hbm2ddl:
+#        auto: update
+#        auto: create
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database-platform: org.hibernate.dialect.MariaDB10Dialect
   http:
     encoding:
@@ -23,3 +64,5 @@ spring:
 
 upload:
   work-dir: work #path to workdir
+jwt:
+  secret:

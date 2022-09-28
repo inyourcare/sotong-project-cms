@@ -34,6 +34,11 @@ html code
 #### cmmn
 - AbstractController , Response 등의 공통 객체 
 
+### jwt 토큰 추가
+jwtTokenUtil 에서 전반적으로 관리
+
+
+
 
 
 ## 해야할 일
@@ -67,3 +72,6 @@ BeanConfig 에서 처리하자
 - testcase 코드 작성해보자
 - requestForm 에 validation 이 약하다. Front 에 자유도가 너무 높다. enable => Y/N 만 넣으시오 있어야함
 - From validation 하드코딩 메시지 코드화
+- DumDataConfig 운영에서 나오지 않게끔 보장
+- AuthExceptionMessage 하드코딩 수정
+- JWT_TOKEN_VALIDITY 수정

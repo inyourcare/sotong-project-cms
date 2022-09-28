@@ -28,6 +28,7 @@ public class DumDataConfig implements CommandLineRunner {
 
         if (userRepository.findByEmail("admin@sotong.co.kr").isEmpty()) {
             User user = userRepository.save(User.builder()
+                    .signInId("admin")
                     .email("admin@sotong.co.kr")
                     .password(passwordEncoder.encode("pass12#$"))
                     .name("김소통")

@@ -7,9 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * @author Samuel Butta
- */
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=true)
@@ -18,10 +15,13 @@ import java.util.Set;
 @AllArgsConstructor
 public class User extends UserBaseEntity{
 
+    @Column(columnDefinition = "VARCHAR(255) default ''", unique = true, nullable = false)
+    private String signInId;
+
     @Column(columnDefinition = "VARCHAR(255) default ''", unique = true)
     private String email;
 
-    @Column(columnDefinition = "VARCHAR(255) default ''")
+    @Column(columnDefinition = "VARCHAR(255) default ''", nullable = false)
     private String password;
 
     @Column(columnDefinition = "VARCHAR(255) default ''")

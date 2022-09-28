@@ -9,9 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-/**
- * @author Samuel Butta
- */
 @Entity
 @Data
 @EqualsAndHashCode(callSuper = true)

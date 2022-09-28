@@ -23,6 +23,6 @@ public class BoardController extends AdminAbstractController {
     @RequestMapping(path = "/addNewBoard", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> createNewBoard(@Valid @RequestBody BoardForm form) throws Exception {
         boardService.createNewBoard(form);
-        return new ResponseEntity<>(new ApiResponse("createTable successfully done", HttpStatus.OK), HttpStatus.OK);
+        return new ResponseEntity<>(new ApiResponse("addNewBoard successfully done", HttpStatus.OK), HttpStatus.OK);
     }
 }
